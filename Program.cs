@@ -12,17 +12,20 @@ public class Program
     
     for(int i = 2; i < response; i++)
     {
-      if (i < response)
+      if (i <= response)
       {
         intList.Add(i);
       }
     }
-    for(int i = 0; i < intList.Count(); i++)
+    for (int i = 0; i < intList.Count; i++)
     {
-      int prime = 2;
-      if(intList[i] % prime == 0)
+      int prime = i + 2;
+      for (int j = i; j < intList.Count; j++)
       {
-        intList.Remove(intList[i]);
+        if (intList[j] != 2 && intList[j] != 3 && intList[j] % prime == 0)
+        {
+          intList.Remove(intList[j]);
+        }
       }
     }
     foreach(int num in intList)
