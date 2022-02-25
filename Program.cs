@@ -28,6 +28,7 @@ public class Program
         }
       }
     }
+    Console.WriteLine("Prime Numbers:");
     foreach(int num in intList)
     {
       Console.WriteLine(num);
